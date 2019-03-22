@@ -7,8 +7,8 @@ class Shelf(models.Model):
 
     warehouse = models.ForeignKey(Warehouse, on_delete=models.CASCADE)
 
-    code = models.CharField(max_length=10, verbose_name="编号")
-    location = models.CharField(max_length=10, verbose_name="位置")
+    code = models.CharField("编号", max_length=10)
+    location = models.CharField("位置", max_length=10)
 
     def __str__(self):
         return self.code + "_" + self.location + '@' + str(self.warehouse)

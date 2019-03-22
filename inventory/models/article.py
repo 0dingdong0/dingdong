@@ -8,10 +8,10 @@ from .entry import Entry
 class Article(models.Model):
 
     supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
-    shelves = models.ManyToManyField(Shelf, verbose_name="货架", through="Position")
+    shelves = models.ManyToManyField(Shelf, through="Position")
 
-    code = models.CharField(max_length="10", verbose_name="编号")
-    name = models.CharField(max_length=20, verbose_name="名字")
+    code = models.CharField("编号", max_length="10")
+    name = models.CharField("名称", max_length=20)
 
     def __str__(self):
         return self.code + '_' + self.name
