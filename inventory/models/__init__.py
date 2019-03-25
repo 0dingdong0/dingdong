@@ -1,2 +1,2 @@
-# from .organic import Person
-# from .synthetic import Robot
+from .shelf import Shelf
+from .warehouse import Warehouse

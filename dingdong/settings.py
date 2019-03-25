@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'inventory.apps.BaseConfig',
+    'base.apps.BaseConfig',
     'inventory.apps.InventoryConfig',
 ]
 
@@ -124,4 +124,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-AUTH_USER_MODEL = 'base.User'
+AUTH_USER_MODEL = 'base.Account'

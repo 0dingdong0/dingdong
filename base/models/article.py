@@ -19,7 +19,7 @@ class Article(models.Model):
         related_query_name="article",
         on_delete=models.CASCADE)
 
-    code = models.CharField("编号", max_length="10")
+    code = models.CharField("编号", max_length=20)
     name = models.CharField("名字", max_length=20)
 
     def __str__(self):
