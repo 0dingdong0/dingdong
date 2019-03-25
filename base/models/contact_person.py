@@ -12,7 +12,7 @@ class ContactPerson(models.Model):
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
-    contacts = GenericRelation(Contact, related_query_name='contacts')
+    contacts = GenericRelation(Contact, related_query_name='contact_person')
 
     name = models.CharField(max_length=100)
 

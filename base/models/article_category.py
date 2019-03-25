@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 
 
-class Category(models.Model):
+class ArticleCategory(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField()
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)

@@ -6,7 +6,7 @@ from .address import Address
 
 class Company(models.Model):
 
-    addresses = GenericRelation(Address, related_query_name='addresses')
+    addresses = GenericRelation(Address, related_query_name='company')
 
     name = models.CharField("名称", max_length=200)
 

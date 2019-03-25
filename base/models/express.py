@@ -7,8 +7,8 @@ from .contact_person import ContactPerson
 
 class Express(models.Model):
 
-    addresses = GenericRelation(Address, related_query_name='addresses')
-    contact_people = GenericRelation(ContactPerson, related_query_name='contact_people')
+    addresses = GenericRelation(Address, related_query_name='express')
+    contact_people = GenericRelation(ContactPerson, related_query_name='express')
 
     name = models.CharField("名称", max_length=200)
 

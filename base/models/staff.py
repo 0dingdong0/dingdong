@@ -8,7 +8,7 @@ from .contact import Contact
 class Staff(models.Model):
 
     account = models.OneToOneField(Account, null=True, blank=True, on_delete=models.SET_NULL)
-    contacts = GenericRelation(Contact, related_query_name='contacts')
+    contacts = GenericRelation(Contact, related_query_name='staff')
 
     class Meta:
         verbose_name = "员工"
