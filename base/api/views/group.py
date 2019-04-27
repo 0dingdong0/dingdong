@@ -8,6 +8,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
