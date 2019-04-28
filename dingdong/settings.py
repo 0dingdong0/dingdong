@@ -165,8 +165,8 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=12),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(minutes=30),
     # 'ROTATE_REFRESH_TOKENS': False,
     # 'BLACKLIST_AFTER_ROTATION': True,
     #
@@ -174,7 +174,7 @@ SIMPLE_JWT = {
     # 'SIGNING_KEY': SECRET_KEY,
     # 'VERIFYING_KEY': None,
 
-    'AUTH_HEADER_TYPES': ('Bearer',),
+    # 'AUTH_HEADER_TYPES': ('Bearer',),
     # 'USER_ID_FIELD': 'id',
     # 'USER_ID_CLAIM': 'user_id',
 
