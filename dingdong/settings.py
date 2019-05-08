@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'rules',
+    'rest_framework_rules',
     'base.apps.BaseConfig',
     'inventory.apps.InventoryConfig',
 ]
@@ -142,6 +144,7 @@ AUTH_USER_MODEL = 'base.Account'
 
 SESSION_COOKIE_SAMESITE = None
 CORS_ALLOW_CREDENTIALS = True
+# CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:8080',
     '127.0.0.1:8080'
