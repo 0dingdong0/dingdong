@@ -1,4 +1,4 @@
-from collections import OrderedDict
+from rest_framework import status
 from base.models import Account
 from base.api.serializers import AccountSerializer
 from rest_framework.decorators import action
@@ -22,10 +22,30 @@ class AccountViewSet(viewsets.ModelViewSet):
         else:
             perms = user.get_all_permissions()
 
-        user_dict = OrderedDict([
-            (field.name, getattr(user, field.name))
-            for field in type(user)._meta.get_fields()
-            if not field.is_relation and field.name != 'password'
-        ])
+        account = AccountSerializer(user, context={'request': request})
 
-        return Response({'account': user_dict, 'permissions': perms})
+        return Response({'account': account.data, 'permissions': perms})
+
+    @action(detail=True, methods=['patch'])
+    def set_password(self, request, pk=None):
+        user = self.get_object()
+        print('-----------------------------')
+        print(request.user.id, user.id)
+        if (not request.user.is_superuser) or (request.user.id == user.id):
+            if not user.check_password(request.data['password']):
+                return Response({
+                    'password': ['密码不正确']
+                }, status.HTTP_400_BAD_REQUEST)
+
+        new_password = request.data['new_password']
+        confirm_password = request.data['confirm_password']
+        if new_password != confirm_password:
+            return Response({
+                'new_password': ['两个新密码不一致'],
+                'confirm_password': ['两个新密码不一致']
+            }, status.HTTP_400_BAD_REQUEST)
+
+        user.set_password(new_password)
+        user.save()
+        return Response(None, status=status.HTTP_200_OK)
+
