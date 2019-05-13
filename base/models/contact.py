@@ -9,8 +9,8 @@ class Contact(models.Model):
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
-    method = models.CharField("联系方式", max_length=50)
-    value = models.CharField("值", max_length=800)
+    type = models.CharField("联系方式", max_length=50)
+    value = models.CharField("值", max_length=254)
 
     def __str__(self):
-        return "Contact: " + self.method + ':' + self.value
+        return "Contact: " + self.type + ':' + self.value
