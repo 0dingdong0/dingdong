@@ -1,0 +1,72 @@
+{
+    "python.pythonPath": "D:\\workspace\\python\\venv_3.7.2\\Scripts\\python.exe",
+    "python.linting.enabled": false,
+    "workbench.colorCustomizations": {
+      "editorLineNumber.foreground": "#b3ccff",
+      "sideBar.background": "#1a1a1a",
+      "sideBar.foreground": "#ececec",
+      "gitDecoration.ignoredResourceForeground": "#aaaaaa",
+      "statusBar.background": "#1a1a1a",
+      "statusBar.foreground": "#e4e4e4",
+      "statusBar.noFolderBackground": "#202020",
+      "statusBar.debuggingBackground": "#263238"
+    },
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "editor.tokenColorCustomizations": {
+      "[Material Theme Darker High Contrast]": {
+        "comments": "#bea360"
+      }
+    },
+    "githubPullRequests.showInSCM": true,
+    "explorer.confirmDelete": false,
+    "todo-tree.defaultHighlight": {
+      "icon": "issue-opened",
+      "type": "text",
+      "foreground": "Red",
+      "background": "#FCF3CF",
+      "iconColour": "red"
+    },
+    "todo-tree.customHighlight": {
+      "TODO": {
+        "icon": "pencil"
+      },
+      "FIXME": {
+        "iconColour": "red"
+      }
+    },
+    "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+        "wrap_attributes": "force-aligned"
+      }
+    },
+    "vetur.format.defaultFormatter.html": "none",
+    "vetur.validation.script": false,
+    "vetur.validation.template": false,
+    "eslint.run": "onSave",
+    "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      {
+        "language": "vue",
+        "autoFix": true
+      },
+      "vue-html"
+    ],
+    "better-comments.highlightPlainText": true,
+    "git.showPushSuccessNotification": true,
+    "vim.highlightedyank.enable": true,
+    "vim.handleKeys": {
+      "<C-`>": false,
+      "<C-g>": false
+    },
+    "files.exclude": {
+      "node_modules": true
+    }
+  }
+  
