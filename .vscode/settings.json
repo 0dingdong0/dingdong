@@ -67,6 +67,21 @@
     },
     "files.exclude": {
       "node_modules": true
+    },
+    "todo-tree.highlights.customHighlight": {
+      "TODO": {
+        "icon": "pencil"
+      },
+      "FIXME": {
+        "iconColour": "red"
+      }
+    },
+    "todo-tree.highlights.defaultHighlight": {
+      "icon": "issue-opened",
+      "type": "text",
+      "foreground": "Red",
+      "background": "#FCF3CF",
+      "iconColour": "red"
     }
   }
   
