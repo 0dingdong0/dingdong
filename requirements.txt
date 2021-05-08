@@ -24,7 +24,7 @@ djangorestframework-simplejwt==4.3.0
 djangorestframework-stubs==0.4.2
 dnspython==1.16.0
 entrypoints==0.3
-eventlet==0.24.1
+eventlet==0.31.0
 flower==0.9.3
 greenlet==0.4.15
 idna==2.8
